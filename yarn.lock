@@ -345,10 +345,10 @@
   resolved "https://registry.yarnpkg.com/@zoralabs/protocol-deployments/-/protocol-deployments-0.1.4.tgz#48b66d38254c40d147abd37455f0796f8c34e155"
   integrity sha512-Lobtbe8+qUAhbnhOn6rESmIm3T1sjCBj4onXquGmBGD9oezeQBpIwzZEzx7slpkT5Z2Y5WQqIzaP1LYZzzwtvQ==
 
-"@zoralabs/protocol-sdk@^0.5.16":
-  version "0.5.16"
-  resolved "https://registry.yarnpkg.com/@zoralabs/protocol-sdk/-/protocol-sdk-0.5.16.tgz#ab2581510b1bcfc17065a12480883ecab0435ab2"
-  integrity sha512-D/czvKH/atCI+VYp7lbej3gTMTKmbBqupMAo5lvLWn0OetSXuchIIZLaN7qJKZPGK25qlc6GQWhD0PmFdwObcQ==
+"@zoralabs/protocol-sdk@^0.5.17":
+  version "0.5.17"
+  resolved "https://registry.yarnpkg.com/@zoralabs/protocol-sdk/-/protocol-sdk-0.5.17.tgz#c0e72cf9a4334564b8d85d406ec74a1507c29116"
+  integrity sha512-8N/g5+kg2R0zS6ecdkzwVgyKO4aV6jYUbBeuUy6D74lcQdK75pgq5VW3eIjqc80CBvR0DCq7uAzHdUCzX0mGsA==
   dependencies:
     "@zoralabs/protocol-deployments" "*"
 
