@@ -3,11 +3,8 @@ import { pad, toHex, concatHex, Address, zeroAddress } from 'viem';
 import { ProposalType } from '@/lib/types/partyTypes';
 import getZoraCreateProposalBytecode from './getZoraCreateProposalBytecode';
 
-const getProposalData = (
-  factoryAddress: Address = zeroAddress,
-  recipient: Address = zeroAddress,
-) => {
-  const encodedBytecodeProposalData = getZoraCreateProposalBytecode(factoryAddress, recipient);
+const getProposalData = (recipient: Address = zeroAddress) => {
+  const encodedBytecodeProposalData = getZoraCreateProposalBytecode(recipient);
   const hexEncodedSelector = pad(toHex(ProposalType.ArbitraryCalls), {
     size: 4,
   });

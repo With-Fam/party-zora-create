@@ -1,7 +1,5 @@
-import { addresses } from '@/lib/zora/addresses';
 import { createContext, useContext, useMemo, useState } from 'react';
 import { Address } from 'viem';
-import { baseSepolia } from 'viem/chains';
 
 const Context = createContext<any>(null);
 
@@ -11,9 +9,7 @@ const Provider = ({ children }: any) => {
   const [saleStrategy, setSaleStrategy] = useState<Address>(
     '0x04E2516A2c207E84a1839755675dfd8eF6302F0a',
   );
-  const [factoryAddress, setFactoryAddress] = useState<Address>(
-    addresses[baseSepolia.id].FACTORY_PROXY as Address,
-  );
+  const [collectionAddress, setCollectionAddress] = useState<Address>();
   const [tokenId, setTokenId] = useState<bigint>(1n);
   const [ethPrice, setEthPrice] = useState<number>(0);
 
@@ -21,8 +17,8 @@ const Provider = ({ children }: any) => {
     () => ({
       fundsRecipient,
       setFundsRecipient,
-      factoryAddress,
-      setFactoryAddress,
+      collectionAddress,
+      setCollectionAddress,
       saleStrategy,
       setSaleStrategy,
       proposalData,
@@ -35,8 +31,8 @@ const Provider = ({ children }: any) => {
     [
       fundsRecipient,
       setFundsRecipient,
-      factoryAddress,
-      setFactoryAddress,
+      collectionAddress,
+      setCollectionAddress,
       saleStrategy,
       setSaleStrategy,
       proposalData,

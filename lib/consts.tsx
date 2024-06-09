@@ -17,7 +17,7 @@ export const DEFAULT_FRAME = {
   postUrl: `${VERCEL_URL}/api/frame`,
 } as FrameMetadataType;
 export const FRAME_INPUT_PLACEHOLDER = '0x... or .eth';
-
+export const ZORA_FACTORY_PROXY = '0x777777C338d93e2C7adf08D102d45CA7CC4Ed021';
 export const SOUND_FACTORY = '0x0000000000aec84F5BFc2af15EAfb943bf4e3522';
 
 export const AIRSTACK_API_URL = 'https://api.airstack.xyz/graphql';

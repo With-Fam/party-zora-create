@@ -1,9 +1,9 @@
 import { Address, encodeFunctionData } from 'viem';
 import { zoraCreator1155FactoryImplABI } from '@zoralabs/protocol-deployments';
 import getProposalBytecode from './getProposalBytecode';
-import { COMMENT } from '../consts';
+import { COMMENT, ZORA_FACTORY_PROXY } from '../consts';
 
-const getZoraCreateProposalBytecode = (zoraFactoryAddress: Address, recipient: Address) => {
+const getZoraCreateProposalBytecode = (recipient: Address) => {
   const newContractURI = 'ipfs://';
   const name = COMMENT;
   const defaultRoyaltyConfiguration = {
@@ -19,7 +19,7 @@ const getZoraCreateProposalBytecode = (zoraFactoryAddress: Address, recipient: A
     functionName: 'createContract',
     args: [newContractURI, name, defaultRoyaltyConfiguration, defaultAdmin, setupActions],
   });
-  const encodedBytecodeProposalData = getProposalBytecode(zoraFactoryAddress, value, data);
+  const encodedBytecodeProposalData = getProposalBytecode(ZORA_FACTORY_PROXY, value, data);
   return encodedBytecodeProposalData;
 };
 
