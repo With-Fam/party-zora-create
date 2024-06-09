@@ -2,8 +2,7 @@ import Input from '../Input';
 import { useProvider } from '@/providers/Provider';
 
 const InputGroup = () => {
-  const { fundsRecipient, setFundsRecipient, collectionAddress, setCollectionAddress } =
-    useProvider();
+  const { fundsRecipient, setFundsRecipient, factoryAddress, setFactoryAddress } = useProvider();
 
   return (
     <div className="flex flex-col gap-5">
@@ -13,9 +12,9 @@ const InputGroup = () => {
         onChange={(e: any) => setFundsRecipient(e.target.value)}
       />
       <Input
-        placeholder="zora collection (base)"
-        value={collectionAddress}
-        onChange={(e: any) => setCollectionAddress(e.target.value)}
+        placeholder="zora factory (base)"
+        value={factoryAddress}
+        onChange={(e: any) => setFactoryAddress(e.target.value)}
       />
     </div>
   );
